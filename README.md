@@ -34,60 +34,76 @@ Este proyecto simula una intersección controlada por semáforos inteligentes ut
 ```bash
 git clone <URL_DEL_REPOSITORIO>
 cd <NOMBRE_DEL_PROYECTO>
-3. Crea un Entorno Virtual
-bash
-Copiar código
+```
+
+### 3. Crea un Entorno Virtual
+```bash
 python3 -m venv env
 source env/bin/activate  # macOS/Linux
 # Para Windows:
 # .\env\Scripts\activate
-4. Instala las Dependencias
-bash
-Copiar código
+```
+
+### 4. Instala las Dependencias
+```bash
 pip install mesa
-Uso
-1. Ejecuta la Simulación
-bash
-Copiar código
+```
+
+---
+
+## Uso
+
+### 1. Ejecuta la Simulación
+```bash
 python run.py
-2. Accede a la Interfaz
-Abre tu navegador y ve a: http://127.0.0.1:8521.
-3. Controles de la Simulación
-Start: Inicia la simulación.
-Stop: Detiene la simulación.
-Reset: Reinicia la simulación desde el principio.
-Archivos del Proyecto
-model.py
+```
+
+### 2. Accede a la Interfaz
+- Abre tu navegador y ve a: [http://127.0.0.1:8521](http://127.0.0.1:8521).
+
+### 3. Controles de la Simulación
+- **Start**: Inicia la simulación.
+- **Stop**: Detiene la simulación.
+- **Reset**: Reinicia la simulación desde el principio.
+
+---
+
+## Archivos del Proyecto
+
+### `model.py`
 Define los agentes y el modelo:
+- **SmartTrafficLight**: Agente semáforo.
+- **Vehicle**: Agente vehículo.
+- **IntersectionModel**: Modelo principal que gestiona los agentes.
 
-SmartTrafficLight: Agente semáforo.
-Vehicle: Agente vehículo.
-IntersectionModel: Modelo principal que gestiona los agentes.
-server.py
-Configura la visualización de los agentes en la cuadrícula utilizando la biblioteca Mesa.
+### `server.py`
+Configura la visualización de los agentes en la cuadrícula utilizando la biblioteca **Mesa**.
 
-run.py
+### `run.py`
 Archivo principal para iniciar el servidor.
 
-Visualización
-Semáforos:
+---
 
-Red: Estado rojo (detiene vehículos).
-Yellow: Estado amarillo (advertencia).
-Green: Estado verde (permite el paso).
-Vehículos:
+## Visualización
 
-Blue: Vehículo en movimiento.
-Gray: Vehículo detenido o fuera de la cuadrícula.
-Personalización
-Cambiar el Tamaño de la Cuadrícula
-En server.py, ajusta el tamaño de la cuadrícula modificando estos parámetros:
+1. **Semáforos**:
+   - `Red`: Estado rojo (detiene vehículos).
+   - `Yellow`: Estado amarillo (advertencia).
+   - `Green`: Estado verde (permite el paso).
 
-python
-Copiar código
+2. **Vehículos**:
+   - `Blue`: Vehículo en movimiento.
+   - `Gray`: Vehículo detenido o fuera de la cuadrícula.
+
+---
+
+## Personalización
+
+### Cambiar el Tamaño de la Cuadrícula
+En `server.py`, ajusta el tamaño de la cuadrícula modificando estos parámetros:
+```python
 grid = CanvasGrid(agent_portrayal, 10, 10, 500, 500)
-Ajustar el Número de Agentes
-En model.py, modifica el número de semáforos y vehículos:
+```
 
-Autor
-Proyecto desarrollado por [Tu Nombre] como un ejercicio de simulación multiagente utilizando Mesa.
+## Autor
+Proyecto desarrollado por [Tu Nombre] como un ejercicio de simulación multiagente utilizando **Mesa**.
