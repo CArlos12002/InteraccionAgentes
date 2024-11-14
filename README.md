@@ -58,7 +58,7 @@ La simulación incluye **semáforos adaptativos**, vehículos con comportamiento
 ### **Ejecución**
 1. Ejecuta el archivo principal desde la terminal:
    ```bash
-   python centralized_semaphores_model.py
+   python model.py
    ```
 2. Se abrirá una interfaz donde podrás visualizar el modelo en acción.
 
@@ -116,14 +116,6 @@ En el desarrollo del proyecto:
 - Diseñamos la **métrica de felicidad** de los vehículos y sus estados.
 - Organizamos los **carriles** y configuramos un sistema descentralizado de comunicación.
 - Integramos estrategias de **Teoría de Juegos** para resolver conflictos en las direcciones.
-
----
-
-## **Mejoras futuras**
-
-1. Implementar algoritmos avanzados para optimizar las decisiones de los semáforos.
-2. Introducir vehículos más inteligentes con algoritmos de aprendizaje automático.
-3. Expandir el modelo a múltiples intersecciones conectadas.
 
 ---
 
